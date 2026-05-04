@@ -104,7 +104,7 @@ body {
 /* ================= HERO / HOME ================= */
 .hero {
     min-height: 100vh;
-    background: url('../Img/kolasefotoku_landscape.jpeg') center/cover no-repeat;
+    background: url('../img/kolasefotoku_landscape.jpeg') center/cover no-repeat;
     display: flex;
     align-items: center;
     padding: 60px;
