@@ -3,13 +3,21 @@
   "name": "prakweb2",
   "builds": [
     {
-      "src": "html/**/*",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "^/$",
+      "dest": "/html/index.html"
+    },
+    {
+      "src": "^/(css|img|icon|video)/(.*)$",
+      "dest": "/$1/$2"
+    },
+    {
+      "src": "^/(.*\.html)$",
       "dest": "/html/$1"
     }
   ]
