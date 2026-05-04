@@ -1,41 +1,22 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "name": "prakweb2",
-  "public": "html",
-  "builds": [
+  "rewrites": [
     {
-      "src": "html/**",
-      "use": "@vercel/static"
+      "source": "/",
+      "destination": "/html/index.html"
     },
     {
-      "src": "css/**",
-      "use": "@vercel/static"
+      "source": "/index.html",
+      "destination": "/html/index.html"
     },
     {
-      "src": "img/**",
-      "use": "@vercel/static"
+      "source": "/profile.html",
+      "destination": "/html/profile.html"
     },
     {
-      "src": "icon/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "video/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "^/(?!css|img|icon|video|html)(.+\\.html)$",
-      "dest": "/html/$1"
-    },
-    {
-      "src": "^/(?!css|img|icon|video)(.*)$",
-      "dest": "/html/$1"
-    },
-    {
-      "src": "^/(css|img|icon|video)/(.+)$",
-      "dest": "/$1/$2"
+      "source": "/portfolio.html",
+      "destination": "/html/portfolio.html"
     }
   ]
 }
