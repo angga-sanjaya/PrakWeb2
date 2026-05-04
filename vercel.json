@@ -1,24 +1,41 @@
 {
   "version": 2,
   "name": "prakweb2",
+  "public": "html",
   "builds": [
     {
-      "src": "**/*",
+      "src": "html/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "img/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "icon/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "video/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "^/$",
-      "dest": "/html/index.html"
-    },
-    {
-      "src": "^/(css|img|icon|video)/(.*)$",
-      "dest": "/$1/$2"
-    },
-    {
-      "src": "^/(.*\\.html)$",
+      "src": "^/(?!css|img|icon|video|html)(.+\\.html)$",
       "dest": "/html/$1"
+    },
+    {
+      "src": "^/(?!css|img|icon|video)(.*)$",
+      "dest": "/html/$1"
+    },
+    {
+      "src": "^/(css|img|icon|video)/(.+)$",
+      "dest": "/$1/$2"
     }
   ]
 }
