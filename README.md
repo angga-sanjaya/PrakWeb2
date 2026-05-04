@@ -26,7 +26,18 @@ This repository contains a simple HTML/CSS website project with the following st
    git push -u origin main
    ```
 
-```
+````
 
 If you want, I can also help you with the exact GitHub repository name and push commands once the repo is created.
+
+## Automated push helper
+
+After authenticating with GitHub CLI, you can run:
+```powershell
+.\create-github-repo.ps1 -RepoName "PrakWeb2"
 ```
+
+This script will create a public repository, add `origin`, and push `main` automatically.
+
+```
+````
