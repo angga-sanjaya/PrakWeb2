@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e9ecef;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Gradiasi Ocean Blue untuk Navbar & Footer */
+.bg-ocean-gradient {
+    background: linear-gradient(135deg, #1c4a73, #5cc7e8) !important;
+}
+
+/* ================= Halaman INDEX (Hero) ================= */
+.hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/kolasefotoku_landscape.jpeg') center/cover no-repeat;
+    min-height: 100vh;
+    /* Mengubah ke 100vh agar FULL layar */
+}
+
+/* ================= Halaman PROFILE ================= */
+.profil-card-left {
+    width: 100%;
+    max-width: 380px;
+    height: 520px;
+    margin: auto;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .profil-card-left {
+        margin-bottom: 70px;
+    }
+}
+
+.video-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    overflow: hidden;
+    background-color: #111;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-profil {
+    position: absolute;
+    left: 50%;
+    bottom: -55px;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 8px solid #e9ecef;
+    object-fit: cover;
+    background-color: white;
+    z-index: 10;
+}
+
+.card-biodata {
+    border-radius: 35px;
+}
